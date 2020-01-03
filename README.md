@@ -91,11 +91,11 @@ TIL 애플리케이션의 백엔드 API는 아래 주소에서 확인할 수 있
 4. Database Access - 데이터베이스 접속을 위한 계정 생성. test/1234
 5. Network Access - `ADD IP ADDRESS` 버튼 클릭 후 `ALLOW ACCESS FROM ANYWHERE` 버튼 클릭 또는 현재 IP만 화이트리스트로 등록
 6. Clusters
-  1. 메인 페이지의 `CONNECT` 버튼 클릭
-  2. Connect Your Application 클릭
-  3. `DRIVER`에 `Node.js` 선택
-  4. `VERSION`에 `3.0 or later` 선택
-  5. Connection String 복사 후 `app.js` 파일의 아래 부분에 붙여넣기
+  a. 메인 페이지의 `CONNECT` 버튼 클릭
+  b. Connect Your Application 클릭
+  c. `DRIVER`에 `Node.js` 선택
+  d. `VERSION`에 `3.0 or later` 선택
+  e. Connection String 복사 후 `app.js` 파일의 아래 부분에 붙여넣기
 
   ```js
   mongoose.connect('여기다가 붙여넣으세요.', {
