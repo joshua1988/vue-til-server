@@ -18,15 +18,18 @@ import { authenticateUser } from './utils/auth.js';
 // mongo db
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-mongoose.connect('mongodb://test:test1234@ds019038.mlab.com:19038/vue-shop', {
-	useNewUrlParser: true,
-});
+mongoose.connect(
+  'mongodb+srv://test:1234@cluster0-ypgh5.mongodb.net/test?retryWrites=true&w=majority',
+  {
+    useNewUrlParser: true,
+  },
+);
 mongoose.Promise = global.Promise;
 
 // server setup
 let port;
 async function configServer() {
-	port = 3000 || (await detectPort(3000));
+  port = 3000 || (await detectPort(3000));
 }
 configServer();
 
@@ -46,9 +49,9 @@ app.use('/api', docs);
 
 // start
 app.listen(port, () =>
-	console.log(
-		`${chalk.white
-			.bgHex('#41b883')
-			.bold(`VUE TIL SERVER IS RUNNING ON ${port}`)}`,
-	),
+  console.log(
+    `${chalk.white
+      .bgHex('#41b883')
+      .bold(`VUE TIL SERVER IS RUNNING ON ${port}`)}`,
+  ),
 );

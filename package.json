@@ -37,8 +37,6 @@
     "mongoose": "^5.4.20",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.10",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
     "prettier": "^1.19.1",
     "rimraf": "^2.6.3",
     "swagger-jsdoc": "^3.5.0",

@@ -115,7 +115,7 @@
         "tags": [
           "/posts"
         ],
-        "description": "사용자가 등록한 게시물을 가져오는 API입니다",
+        "description": "사용자가 등록한 게시물의 목록을 가져오는 API입니다",
         "responses": {
           "200": {
             "description": "[완료]게시물을 받아왔습니다",
@@ -248,14 +248,14 @@
           {
             "name": "_id",
             "in": "path",
-            "description": "post id that needs to be updated",
+            "description": "수정할 게시물의 아이디",
             "required": true,
             "type": "string"
           },
           {
             "in": "body",
             "name": "body",
-            "description": "Updated Post object",
+            "description": "수정할 게시글의 정보",
             "required": true,
             "schema": {
               "$ref": "#/definitions/Posts"
@@ -282,6 +282,48 @@
           },
           "500": {
             "description": "[에러]서버에 문제가 있어 게시물을 생성하지 못했습니다",
+            "content": {
+              "application/json": {},
+              "application/xml": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "/posts"
+        ],
+        "description": "특정 게시물을 삭제하는 API입니다",
+        "operationId": "deletePost",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "description": "삭제할 게시물의 아이디",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "[완료]게시물이 삭제되었습니다",
+            "content": {
+              "application/json": {},
+              "application/xml": {}
+            }
+          },
+          "400": {
+            "description": "[에러]게시물을 삭제할 수 없습니다",
+            "content": {
+              "application/json": {},
+              "application/xml": {}
+            }
+          },
+          "404": {
+            "description": "[에러]게시글을 찾을 수 없습니다"
+          },
+          "500": {
+            "description": "[에러]서버에 문제가 있어 게시물을 삭제하지 못했습니다",
             "content": {
               "application/json": {},
               "application/xml": {}
