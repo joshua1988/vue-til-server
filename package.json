@@ -21,7 +21,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^8.2.6",
     "babel-jest": "^23.4.2",
-    "bcrypt": "^3.0.5",
+    "bcrypt": "^3.0.8",
     "body-parser": "^1.18.3",
     "chalk": "^2.4.2",
     "concurrently": "^4.1.0",
